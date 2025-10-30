@@ -82,9 +82,9 @@
     
     document.addEventListener('keydown', function(e) {
         konamiCode.push(e.key);
-        konamiCode.splice(-konamiSequence.length - 1, konamiCode.length - konamiSequence.length);
+        konamiCode = konamiCode.slice(-konamiSequence.length);
         
-        if (konamiCode.join('').includes(konamiSequence.join(''))) {
+        if (konamiCode.join(',') === konamiSequence.join(',')) {
             document.body.style.transform = 'rotate(360deg)';
             document.body.style.transition = 'transform 2s ease';
             setTimeout(() => {
