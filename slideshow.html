@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.slideshow {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 4s;
+}
+.slide.active {
+  opacity: 1;
+}
+body { margin: 0; background: #000; }
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  z-index: 1000;
+}
+.progress-bar {
+  width: 300px;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  background: white;
+  width: 0%;
+  transition: width 0.1s;
+}
+</style>
+</head>
+<body>
+<div class="loader" id="loader">
+  <div>Loading images...</div>
+  <div class="progress-bar">
+    <div class="progress" id="progress"></div>
+  </div>
+</div>
+<div class="slideshow">
+<img class="slide" src="img/PXL_20220524_130818162~54.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~60.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~70.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~21.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~69.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~75.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~46.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~55.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~13.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~44.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~20.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~10.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~27.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~67.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~2.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~59.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~48.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~38.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~71.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~56.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~52.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~72.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~57.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~23.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~3.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~19.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~63.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~9.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~45.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~39.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~35.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~8.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~43.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~74.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~73.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~65.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~47.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~24.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~31.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~12.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~6.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~11.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~41.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~61.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~37.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~22.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~32.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~58.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~34.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~68.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~28.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~14.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~30.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~40.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~33.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~4.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~5.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~66.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~7.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~29.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~42.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~36.jpg">
+<img class="slide" src="img/PXL_20220524_130818162.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~53.jpg">
+<img class="slide" src="img/PXL_20220524_130818162~62.jpg">
+</div>
+<script>
+const images = document.querySelectorAll('.slide');
+const progress = document.getElementById('progress');
+const loader = document.getElementById('loader');
+let loaded = 0;
+let currentIndex = 0;
+
+images.forEach(img => {
+  img.onload = () => {
+    loaded++;
+    progress.style.width = (loaded / images.length * 100) + '%';
+    if (loaded === images.length) {
+      loader.style.display = 'none';
+      startSlideshow();
+    }
+  };
+});
+
+function startSlideshow() {
+  images[0].classList.add('active');
+  setInterval(() => {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+  }, 2000);
+}
+</script>
+</body>
+</html>

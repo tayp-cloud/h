@@ -1,0 +1,27 @@
+{
+  "name": "soon",
+  "version": "1.0.0",
+  "description": "tayp cloud coming soon",
+  "keywords": [
+    "tayp",
+    "cloud",
+    "coming",
+    "soon",
+    "tape"
+  ],
+  "homepage": "https://github.com/tayp-cloud/soon#readme",
+  "bugs": {
+    "url": "https://github.com/tayp-cloud/soon/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tayp-cloud/soon.git"
+  },
+  "license": "ISC",
+  "author": "tayp",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
